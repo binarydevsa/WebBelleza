@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bella Nails Studio | Demo de salón de uñas</title>
+  <meta name="description" content="Demo de página web para salón de uñas: escoge tu tono, mira los precios, reserva por WhatsApp y deja tu reseña en Google. Hecha por Binary Dev.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bella Nails Studio | Demo de salón de uñas">
+  <meta property="og:description" content="Así podría verse la página de tu salón: tonos, precios, reservas y reseñas en un solo lugar.">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#FFD3E2">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/shrikhand-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    "name": "Bella Nails Studio (demo)",
+    "description": "Página de demostración creada por Binary Dev. Datos de ejemplo.",
+    "address": {"@type": "PostalAddress", "streetAddress": "123 Main St", "addressLocality": "Tu Ciudad", "addressCountry": "US"},
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "15:00"}
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <p class="demo-bar" role="note"><span data-i18n="demo.text">Esta es una página de ejemplo hecha por Binary Dev. El nombre, los precios y las reseñas son de muestra.</span></p>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Bella Nails</a>
+      <nav class="main-nav" aria-label="Principal" data-i18n-attr="aria-label:nav.label">
+        <a href="#precios" data-i18n="nav.prices">Precios</a>
+        <a href="#muestrario" data-i18n="nav.gallery">Diseños</a>
+        <a href="#resenas" data-i18n="nav.reviews">Reseñas</a>
+        <a href="#visitanos" data-i18n="nav.visit">Dónde estamos</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" type="button" id="lang-toggle" aria-label="Switch to English">EN</button>
+        <a class="btn btn-small" href="#reservar" data-i18n="cta.book">Reservar cita</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title" data-i18n="hero.title">Uñas que hablan por ti</h1>
+          <p class="lede" data-i18n="hero.lede">Manicure, pedicure, Gel X, acrílicas y pestañas en un solo lugar. Mira los precios y aparta tu cita sin esperar respuesta.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#reservar" data-i18n="cta.book">Reservar cita</a>
+            <a class="btn btn-line js-wa" href="#reservar" data-wa="general" data-i18n="cta.whatsapp">Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="picker">
+          <p class="picker-hint" id="picker-hint" data-i18n="picker.hint">Toca un tono y mira cómo cambia la página.</p>
+          <div class="wheel-stage">
+            <div class="wheel" id="wheel" role="radiogroup" aria-labelledby="picker-hint">
+              <button type="button" class="tip" role="radio" aria-checked="true" data-fill="#D4123C" data-deep="#B00F33" data-es="Cereza 214" data-en="Cherry 214"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#E0218A" data-deep="#A8125F" data-es="Fucsia Miami" data-en="Miami Fuchsia"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#FF8DB5" data-deep="#AD1F55" data-es="Chicle" data-en="Bubblegum"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#FF6B57" data-deep="#A8341E" data-es="Coral playa" data-en="Beach Coral"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#FFB199" data-deep="#94432A" data-es="Durazno" data-en="Peach"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#E3B6A1" data-deep="#7E4C3A" data-es="Nude canela" data-en="Cinnamon Nude"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#8C5A45" data-deep="#6E4433" data-es="Mocha" data-en="Mocha"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#B79CE8" data-deep="#6346A8" data-es="Lila" data-en="Lilac"></button>
+              <button type="button" class="tip tip-chrome" role="radio" aria-checked="false" data-fill="#C9CDD6" data-deep="#4A4F5C" data-es="Cromo espejo" data-en="Mirror Chrome"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#1F2F6B" data-deep="#1F2F6B" data-es="Azul noche" data-en="Midnight Blue"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#2E9E7E" data-deep="#1A6B55" data-es="Jade" data-en="Jade"></button>
+              <button type="button" class="tip" role="radio" aria-checked="false" data-fill="#6B1230" data-deep="#6B1230" data-es="Vino" data-en="Wine"></button>
+            </div>
+            <p class="shade-name" id="shade-name" aria-live="polite">Cereza 214</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo" aria-labelledby="promo-title">
+      <div class="wrap promo-inner">
+        <h2 id="promo-title" class="promo-title" data-i18n="promo.title">Mani + pedi spa por $55</h2>
+        <p class="promo-text" data-i18n="promo.text">Promo del mes, de martes a jueves.</p>
+        <a class="btn btn-milk js-wa" href="#reservar" data-wa="promo" data-i18n="promo.cta">Quiero la promo</a>
+      </div>
+    </section>
+
+    <section class="section" id="precios" aria-labelledby="prices-title">
+      <div class="wrap">
+        <h2 id="prices-title" class="section-title" data-i18n="prices.title">Precios</h2>
+        <div class="board">
+          <div class="board-group">
+            <h3 data-i18n="prices.hands">Manos</h3>
+            <dl class="price-list">
+              <div><dt data-i18n="s.mani">Manicure clásico</dt><dd>$25</dd></div>
+              <div><dt data-i18n="s.gelmani">Manicure en gel</dt><dd>$38</dd></div>
+              <div><dt data-i18n="s.gelx">Gel X</dt><dd>$55<span data-i18n="plus">+</span></dd></div>
+              <div><dt data-i18n="s.acrylic">Acrílicas, set completo</dt><dd>$50<span data-i18n="plus">+</span></dd></div>
+              <div><dt data-i18n="s.fill">Relleno de acrílico</dt><dd>$35</dd></div>
+            </dl>
+          </div>
+          <div class="board-group">
+            <h3 data-i18n="prices.feet">Pies</h3>
+            <dl class="price-list">
+              <div><dt data-i18n="s.pedi">Pedicure clásico</dt><dd>$32</dd></div>
+              <div><dt data-i18n="s.spapedi">Pedicure spa</dt><dd>$45</dd></div>
+              <div><dt data-i18n="s.gelpedi">Pedicure con gel</dt><dd>$48</dd></div>
+            </dl>
+          </div>
+          <div class="board-group">
+            <h3 data-i18n="prices.extras">Diseño y extras</h3>
+            <dl class="price-list">
+              <div><dt data-i18n="s.art">Diseño, por uña</dt><dd>$5<span data-i18n="plus">+</span></dd></div>
+              <div><dt data-i18n="s.french">Francés</dt><dd>$10</dd></div>
+              <div><dt data-i18n="s.chrome">Cromado</dt><dd>$10</dd></div>
+              <div><dt data-i18n="s.removal">Retiro de gel o acrílico</dt><dd>$15</dd></div>
+            </dl>
+          </div>
+          <div class="board-group">
+            <h3 data-i18n="prices.lashes">Pestañas</h3>
+            <dl class="price-list">
+              <div><dt data-i18n="s.classic">Clásicas</dt><dd>$80</dd></div>
+              <div><dt data-i18n="s.hybrid">Híbridas</dt><dd>$95</dd></div>
+              <div><dt data-i18n="s.volume">Volumen</dt><dd>$110</dd></div>
+              <div><dt data-i18n="s.lashfill">Relleno, cada 2 a 3 semanas</dt><dd>$55</dd></div>
+            </dl>
+          </div>
+        </div>
+        <p class="board-note" data-i18n="prices.note">El signo + quiere decir que el precio sube según el largo o el diseño.</p>
+      </div>
+    </section>
+
+    <section class="section section-milk" id="muestrario" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <h2 id="gallery-title" class="section-title" data-i18n="gallery.title">Diseños de la casa</h2>
+        <p class="section-lede" data-i18n="gallery.note">En tu página, aquí van las fotos de tus propios trabajos, tomadas de tu TikTok o Instagram.</p>
+        <ul class="sample-row">
+          <li><span class="big-tip d-cherry" aria-hidden="true"></span><span data-i18n="g.1">Cereza brillante</span></li>
+          <li><span class="big-tip d-french" aria-hidden="true"></span><span data-i18n="g.2">Francés clásico</span></li>
+          <li><span class="big-tip d-chrome" aria-hidden="true"></span><span data-i18n="g.3">Cromo espejo</span></li>
+          <li><span class="big-tip d-marble" aria-hidden="true"></span><span data-i18n="g.4">Mármol</span></li>
+          <li><span class="big-tip d-ombre" aria-hidden="true"></span><span data-i18n="g.5">Degradado rosa</span></li>
+          <li><span class="big-tip d-dots" aria-hidden="true"></span><span data-i18n="g.6">Lunares</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="reservar" aria-labelledby="book-title">
+      <div class="wrap">
+        <h2 id="book-title" class="section-title" data-i18n="book.title">Aparta tu cita</h2>
+        <p class="section-lede" data-i18n="book.text">Escoge servicio, día y hora. Te abrimos WhatsApp con todo ya escrito para que solo le des enviar.</p>
+        <div class="ticket">
+          <form class="ticket-form" id="book-form" novalidate>
+            <div class="field">
+              <label for="f-service" data-i18n="book.service">Servicio</label>
+              <select id="f-service" name="service" required>
+                <option value="" data-i18n="book.choose">Escoge un servicio</option>
+                <option data-i18n="s.gelmani">Manicure en gel</option>
+                <option data-i18n="s.gelx">Gel X</option>
+                <option data-i18n="s.acrylic">Acrílicas, set completo</option>
+                <option data-i18n="s.spapedi">Pedicure spa</option>
+                <option data-i18n="promo.short">Promo mani + pedi spa</option>
+                <option data-i18n="s.lashset">Pestañas clásicas</option>
+              </select>
+            </div>
+            <fieldset class="field">
+              <legend data-i18n="book.day">Día</legend>
+              <div class="chips" id="day-chips"></div>
+            </fieldset>
+            <fieldset class="field">
+              <legend data-i18n="book.time">Hora</legend>
+              <div class="chips" id="time-chips"></div>
+            </fieldset>
+            <div class="field">
+              <label for="f-name" data-i18n="book.name">Tu nombre</label>
+              <input id="f-name" name="name" type="text" autocomplete="given-name" required>
+            </div>
+          </form>
+          <div class="ticket-stub">
+            <p class="stub-title" data-i18n="book.stub">Tu cita</p>
+            <dl class="stub-list">
+              <div><dt data-i18n="book.service">Servicio</dt><dd id="sum-service">—</dd></div>
+              <div><dt data-i18n="book.day">Día</dt><dd id="sum-day">—</dd></div>
+              <div><dt data-i18n="book.time">Hora</dt><dd id="sum-time">—</dd></div>
+              <div><dt data-i18n="book.shade">Tono</dt><dd id="sum-shade">Cereza 214</dd></div>
+            </dl>
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+            <button class="btn btn-block" type="submit" form="book-form" data-i18n="book.submit">Enviar por WhatsApp</button>
+            <p class="stub-note" data-i18n="book.note">También se puede conectar a Booksy, Fresha o Square para que la cita caiga sola en el calendario.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ink" id="resenas" aria-labelledby="reviews-title">
+      <div class="wrap reviews-grid">
+        <div>
+          <h2 id="reviews-title" class="section-title" data-i18n="reviews.title">Lo que dicen nuestras clientas</h2>
+          <p class="section-lede" data-i18n="reviews.note">Reseñas de ejemplo. En tu página se muestran las reales de tu perfil de Google.</p>
+          <div class="quotes">
+            <figure>
+              <blockquote data-i18n="r.1">“Mis uñas duraron tres semanas perfectas. Súper detallistas con el diseño.”</blockquote>
+              <figcaption><span class="stars" aria-hidden="true">★★★★★</span> María G.</figcaption>
+            </figure>
+            <figure>
+              <blockquote data-i18n="r.2">“Reservé desde la página en un minuto y me atendieron a la hora exacta.”</blockquote>
+              <figcaption><span class="stars" aria-hidden="true">★★★★★</span> Andrea L.</figcaption>
+            </figure>
+            <figure>
+              <blockquote data-i18n="r.3">“El pedicure spa vale cada dólar. Ya es mi lugar fijo.”</blockquote>
+              <figcaption><span class="stars" aria-hidden="true">★★★★★</span> Karla M.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <aside class="table-tent" aria-labelledby="qr-title">
+          <p id="qr-title" class="tent-title" data-i18n="qr.title">¿Te gustó tu visita?</p>
+          <img src="assets/qr-review.svg" width="156" height="156" alt="Código QR de ejemplo para dejar una reseña en Google" data-i18n-attr="alt:qr.alt">
+          <p class="tent-text" data-i18n="qr.text">Escanéame y déjanos tu reseña en Google. Son 30 segundos.</p>
+          <a class="btn btn-small js-review" href="#resenas" data-i18n="qr.cta">Dejar mi reseña</a>
+          <p class="tent-note" data-i18n="qr.note">Este cartelito se imprime y se pega en la mesa de trabajo.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="visitanos" aria-labelledby="visit-title">
+      <div class="wrap visit-grid">
+        <div>
+          <h2 id="visit-title" class="section-title" data-i18n="visit.title">Dónde estamos</h2>
+          <address class="address">123 Main St<br><span data-i18n="visit.city">Tu Ciudad, EE. UU.</span></address>
+          <dl class="hours">
+            <div><dt data-i18n="d.mon">Lunes</dt><dd data-i18n="closed">Cerrado</dd></div>
+            <div><dt data-i18n="d.tf">Martes a viernes</dt><dd>10 a.m. – 7 p.m.</dd></div>
+            <div><dt data-i18n="d.sat">Sábado</dt><dd>9 a.m. – 6 p.m.</dd></div>
+            <div><dt data-i18n="d.sun">Domingo</dt><dd>10 a.m. – 3 p.m.</dd></div>
+          </dl>
+        </div>
+        <div class="map-card" role="img" aria-label="Mapa de ejemplo con la ubicación del salón" data-i18n-attr="aria-label:visit.mapalt">
+          <span class="road r1"></span><span class="road r2"></span><span class="road r3"></span>
+          <span class="pin"></span>
+          <p class="map-note" data-i18n="visit.map">Aquí va tu ubicación de Google Maps con el botón “Cómo llegar”.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="brand">Bella Nails</p>
+      <p data-i18n="footer.made">Demo diseñada y desarrollada por <strong>Binary Dev</strong>. Hacemos páginas web y perfiles de Google para negocios.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float js-wa" href="#reservar" data-wa="general" aria-label="Escríbenos por WhatsApp" data-i18n-attr="aria-label:cta.whatsapp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
